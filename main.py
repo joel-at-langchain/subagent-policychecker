@@ -1,10 +1,10 @@
-"""Local CLI entry point for the Policy Compliance Checker."""
+"""Local CLI entry point for the Deep Agent (Policy Checker + Best Practices Research)."""
 
 from dotenv import load_dotenv
 
 load_dotenv()
 
-from policy_checker.graph import graph
+from deep_agent.graph import graph
 
 SAMPLE_TEXT = """\
 Dear hiring manager,
@@ -29,7 +29,7 @@ Server IP: 192.168.1.100\
 
 def main() -> None:
     print("=" * 60)
-    print("Policy Compliance Checker")
+    print("Deep Agent: Policy Checker + Best Practices Research")
     print("=" * 60)
 
     result = graph.invoke({"input_text": SAMPLE_TEXT})
@@ -46,6 +46,9 @@ def main() -> None:
 
     print("\n--- Final Review & Suggestions ---")
     print(result["review_summary"])
+
+    print("\n--- Best Practices Report ---")
+    print(result["best_practices_report"])
 
 
 if __name__ == "__main__":

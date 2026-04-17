@@ -1,7 +1,8 @@
 {
   "dependencies": ["."],
   "graphs": {
-    "policy_checker": "./policy_checker/graph.py:graph"
+    "policy_checker": "./policy_checker/graph.py:graph",
+    "deep_agent": "./deep_agent/graph.py:graph"
   },
   "env": ".env"
 }
